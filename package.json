@@ -1,0 +1,19 @@
+{
+  "name": "kafka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ignore 'node_modules/*, logs/*, dist/*, .git/*, .vscode/*' --delay 1000ms index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "kafkajs": "^2.2.4",
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+# Fetching the minified node image on apline linux
+FROM node:slim
+
+# Declaring env
+ENV NODE_ENV development
+
+# Setting up the work directory
+WORKDIR /usr/src/app
+
+# Copying all the files in our project
+COPY package*.json ./
+
+# Installing dependencies
+RUN npm install
+
+COPY . .
+
+# Exposing server port
+EXPOSE 8000
+
+# Starting our application
+# docker-compose run --rm app node consumer.js
+# CMD [ "npm", "start" ]
+# CMD ["node", "consumer.js"]
+# CMD ["node", "producer.js"]
